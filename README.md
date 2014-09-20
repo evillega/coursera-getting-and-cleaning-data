@@ -17,12 +17,12 @@ The purpose of this project is to demonstrate your ability to collect, work with
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 ==========================================================================================================================
-####Links to the data sets and their descriptions needed to Complete the Assignment
+####Links to the data sets and their descriptions needed to complete the assignment
 - [Data Set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 - [Description](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 
-####File Descriptions
+####File descriptions
 *The dataset includes the following files:*
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
@@ -40,7 +40,7 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 
 ==========================================================================================================================
-######License and Disclaimers
+######License and disclaimers
 *For more information about this dataset contact: activityrecognition@smartlab.ws*
 
 ######*License:*
