@@ -18,7 +18,9 @@
 # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 #==========================================================================================
 
-# Prepare directory and load any required packages
+#==========================================================================================
+# i. Prepare directory and load any required packages
+#==========================================================================================
 # check working directory
 getwd()
 
@@ -30,7 +32,7 @@ rm(list = ls())
 
 # Check if "data" directory already exists.
 # If not, then it creates "data" directory, where all data pertaining to this code
-# is stored.  
+# are stored.  
 if(!file.exists("data")) {
      dir.create("data")
 }
