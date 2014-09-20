@@ -3,7 +3,6 @@
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. 
 
 ####You will be required to submit:
-====================================
 
 1. **a tidy data set as described below.**
 2. **a link to a Github repository with your script for performing the analysis.**
@@ -13,14 +12,12 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 
 ####Here are the links to the data sets and their descriptions needed to Complete the Assignment
-====================================
 
 - [Data Set](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 - [Description](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 
 ####You should create one R script called *run_analysis.R* that does the following:
-====================================
 
 1. Merges the training and the test sets to create one data set.
 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
@@ -30,7 +27,6 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 
 ####File Descriptions
-====================================
 
 **The dataset includes the following files:**
 * 'README.txt'
