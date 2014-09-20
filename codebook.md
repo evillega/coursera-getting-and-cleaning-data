@@ -20,8 +20,9 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 #####Raw Data
 
-![Diagrammatic relationship of the files in this data set](https://raw.githubusercontent.com/evillega/coursera-getting-and-cleaning-data/master/Diagram.png)
-Diagram courtesy of David Hood.
+![Diagrammatic relationship of the files in this data set. By: David Hood] ](https://raw.githubusercontent.com/evillega/coursera-getting-and-cleaning-data/master/Diagram.png)
+
+
 #####Data Transformations
 
 
