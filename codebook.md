@@ -39,15 +39,31 @@ Links:
 * 'test/y_test.txt': Test labels.
 * 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. 
 * 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. 
+
 **Notes:** 
+
 * Features are normalized and bounded within [-1,1].
 * Each feature vector is a row on the text file.
 
-####Data Transformations
-
-
-
 *For more information about this dataset contact: activityrecognition@smartlab.ws*
+
+####Data Transformations
+#####i. Preparing directory and load any required packages
+==========================================================================================
+#####1. Merges the training and the test data sets to create one set
+==========================================================================================
+#####2. Extracts only the measurements on the mean and standard deviation for each measurement
+==========================================================================================
+#####3. Uses descriptive activity names to name the activites in the data set
+==========================================================================================
+#####4. Appropriately labels the data set with descriptive variable names
+==========================================================================================
+#####5. Creates a second, independent tidy data wet with the average of each variable for each activity and each subject
+
+
+####Variable Names and Brief Descriptions
+
+
 
 ==========================================================================================================================
 ######License and Disclaimers
