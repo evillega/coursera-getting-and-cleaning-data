@@ -51,6 +51,7 @@ Links:
 ####i. Preparing working directory 
 
 Created a [*Data*](https://github.com/evillega/coursera-getting-and-cleaning-data/tree/master/data) folder containing all the data sets needed for this assignment. See above for the file list.
+
 ==========================================================================================
 #####1. Merging the training and the test data sets to create one set
 Created the following data.frame vectors:
