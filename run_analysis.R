@@ -291,5 +291,5 @@ TidyData$ActivityType[1:6]
 # [1] "WALKING" "WALKING UPSTAIRS" "WALKING DOWNSTAIRS" "SITTING" "STANDING" "LAYING" 
 
 # Saves table to Data folder
-write.table(TidyData, "./TidyData.txt",row.names = FALSE)
+write.table(TidyData, "./TidyData.txt", row.names = FALSE)
 
