@@ -4,11 +4,11 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 ####You will be required to submit:
 
-1. **a tidy data set as described below.**
-2. **a link to a Github repository with your script for performing the analysis.**
-3. **a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called *CodeBook.md*** 
-4. **a README.md in the repo with your scripts.** 
-  * **This README.md explains how all of the scripts work and how they are connected.** 
+1. a tidy data set as described below.
+2. a link to a Github repository with your script for performing the analysis.
+3. a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called *CodeBook.md*
+4. a README.md in the repo with your scripts.
+  * This README.md explains how all of the scripts work and how they are connected.
 
 
 
@@ -31,7 +31,7 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 ####File Descriptions
 
-**The dataset includes the following files:**
+The dataset includes the following files:
 * 'README.txt'
 * 'features_info.txt': Shows information about the variables used on the feature vector.
 * 'features.txt': List of all features.
