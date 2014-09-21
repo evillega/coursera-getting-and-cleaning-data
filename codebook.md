@@ -145,6 +145,7 @@ Changed column labels on the data frames created above
 Representative transforamtion of variable names
 
 **Features Names**
+
 Before | After
 --- | ---
 tBodyAcc-mean()-X |	tBodyAccMeanX
@@ -153,6 +154,7 @@ tBodyAcc-mean()-Z |	tBodyAccMeanZ
 tBodyAcc-std()-X | tBodyAccStdX
 
 **ActivityLabels**
+
 Before | After
 --- | ---
 WALKING |	tBodyAccMeanX
