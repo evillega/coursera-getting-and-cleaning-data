@@ -144,14 +144,23 @@ Changed column labels on the data frames created above
 
 Representative transforamtion of variable names
 
-Features Names
-
+**Features Names**
 Before | After
 --- | ---
 tBodyAcc-mean()-X |	tBodyAccMeanX
 tBodyAcc-mean()-Y |	tBodyAccMeanY
 tBodyAcc-mean()-Z |	tBodyAccMeanZ
 tBodyAcc-std()-X | tBodyAccStdX
+
+**ActivityLabels**
+Before | After
+--- | ---
+WALKING |	tBodyAccMeanX
+WALKING_UPSTAIRS | WALKING UPSTAIRS
+WALKING_DOWNSTAIRS | WALKING DOWNSTAIRS
+SITTING | SITTING
+STANDING | STANDING
+LAYING | LAYING
 
 
 ==========================================================================================
