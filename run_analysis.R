@@ -228,8 +228,8 @@ MeanStdMeasures_2 <- MeanStdMeasures_2[, c(68, 1, 69, 2:67)] # rearranges column
 colnames(MeanStdMeasures_2[1:3]) # checks the first 3 columns
 # [1] "SubjectID"    "ActivityID"   "ActivityType"
 
-# Write table to Data folder
-write.table(MeanStdMeasures_2, "./Data/MeanStdMeasures_2.txt",row.names = FALSE,
+# Write table to working folder
+write.table(MeanStdMeasures_2, "./MeanStdMeasures_2.txt", row.names = FALSE,
             quote = FALSE)
 
 #==========================================================================================
@@ -249,7 +249,7 @@ columnNames <- gsub("BodyBody", "Body", columnNames)
 
 colnames(MeanStdMeasures_2) <- columnNames
 FinalData <- MeanStdMeasures_2
-write.table(FinalData, "./Data/FinalData.txt",row.names = FALSE,
+write.table(FinalData, "./FinalData.txt",row.names = FALSE,
             quote = FALSE)
 #==========================================================================================
 # 5. Creates a second, independent tidy data wet with the average of each variable for
