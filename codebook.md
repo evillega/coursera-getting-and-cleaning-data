@@ -153,17 +153,44 @@ tBodyAcc-mean()-Y |	tBodyAccMeanY
 tBodyAcc-mean()-Z |	tBodyAccMeanZ
 tBodyAcc-std()-X | tBodyAccStdX
 
-**ActivityLabels**
+**ActivityLabels (column names)**
 
 Before | After
 --- | ---
-WALKING |	tBodyAccMeanX
+V1 | ActivityID
+V2 | ActivityType
+
+**ActivityLabels (ActivityTypes)**
+
+Before | After
+--- | ---
+WALKING |	WALKING
 WALKING_UPSTAIRS | WALKING UPSTAIRS
 WALKING_DOWNSTAIRS | WALKING DOWNSTAIRS
 SITTING | SITTING
 STANDING | STANDING
 LAYING | LAYING
 
+**SubjectTrain and SubjectTes (column name)**
+
+Before | After
+--- | ---
+V1 | SubjectID
+
+**y_Train and y_Test (column names)**
+
+Before | After
+--- | ---
+V1 | ActivityID
+
+**x_Train and x_Test (column names)**
+
+Before | After
+--- | ---
+V1 | tBodyAcc-mean()-X
+V2 | tBodyAcc-mean()-Y
+...
+V561 | angle(Z,gravitymean)
 
 ==========================================================================================
 ######License and Disclaimers
