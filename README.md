@@ -34,6 +34,7 @@ The purpose of this project is to demonstrate the ability to collect, work with,
 * 'test/y_test.txt': Test labels.
 * 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. 
 * 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. 
+
 **Notes:** 
 * Features are normalized and bounded within [-1,1].
 * Each feature vector is a row on the text file.
