@@ -144,7 +144,7 @@ Changed column labels on the data frames created above
 
 Representative transforamtion of variable names
 
-**Features Names**
+**Features**
 
 Before | After
 --- | ---
@@ -189,7 +189,7 @@ Before | After
 --- | ---
 V1 | tBodyAcc-mean()-X
 V2 | tBodyAcc-mean()-Y
-...
+... | ...
 V561 | angle(Z,gravitymean)
 
 ==========================================================================================
