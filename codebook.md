@@ -62,7 +62,7 @@ Created the following data.frame vectors:
 - ActivityLabels
   - Contains the list of all  6 types of activities measured in the study.
     - WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING.
-	- Dimension: 6 x 2.
+  - Dimension: 6 x 2.
 - SubjectTrain
   - Each row identifies the subject, using unique numeric ID#'s for each subject, who performed the activity during the training session.
   - Dimension: 7352 x 1.
@@ -102,11 +102,11 @@ Changed column labels on the data frames created above
 - y_Test: column name was replaced to "ActivityID".
 
 ==========================================================================================
-####2. Extracts only the measurements on the mean and standard deviation for each measurement
+####2. Extracts only the measurements of the mean and standard deviation for each measurement
 
 1. Created a character vector containing the column names from the "AllData" data.frame vector. Named the vector "columnNames".  This was used to create a new data.frame vector that only contained mean "mean", standard deveation "std", "ActivityID" and "SubjectID" columns.
-2. A logical vector named "MeanStdVector" was created that contained the selected columns.  Columns were selected from the "AllData" data.frame vector using character strings containing either "Activity", "Subject", "std" "mean" and "meanfreq"  using ***grepl*** command. A total of 68 columns were downselected.
-3. A final table "MeanStdMeasures" data.frame consisting of the mean and standard deviations for each SubjectID and Activity measurements was created. The dimension of the data frame is 10299 x 68.
+2. A logical vector named "MeanStdVector" was created that contained the selected columns.  Columns were selected from the "AllData" data.frame vector using character strings containing either "Activity", "Subject", "std" "mean" and "meanfreq"  using ***grepl*** command. The downselection resulted in a total of 68 columns.
+3. A final table "MeanStdMeasures" data.frame consisting of the means and standard deviations for each SubjectID and Activity measurements was created. The dimension of the data frame is 10299 x 68.
 
 ==========================================================================================
 ####3. Uses descriptive activity names to name the activites in the data set
@@ -117,7 +117,7 @@ Changed column labels on the data frames created above
 ==========================================================================================
 ####4. Appropriately labels the data set with descriptive variable names
 
-1. The column names in the "MeandStdMeasures_2" were re-labeld to make the data cleaner.  To do this a new vector called "columnNames" containing just the column names of "MeanStdMeasures_2" was created.
+1. The column names in the "MeanStdMeasures_2" were re-labeld to make the data cleaner.  To do this a new vector called "columnNames" containing just the column names of "MeanStdMeasures_2" was created.
 2.  The names were then modified using the ***gsub*** function. Character strings used are listed below:
   - "-std" replaced with "Std".
   - "-mean" replaced with "Mean".
@@ -136,7 +136,7 @@ Changed column labels on the data frames created above
 2. A series of column reaarrangements and relabeling were carried out using ***merge*** command so that the first 3 columns are "SubjectID", "ActivityID", and "ActivityType", respectively.
 3. The rows of the tidy data was rearranged so that the values are grouped by "SubjectID" using the ***order*** command.
 4. The "ActivityType" names were cleaned up using the ***gsub*** command.  All "_" were removed from the "WALKING_DOWNSTAIRS" and "WALKING_UPSTAIRS_" names.
-5. The final tidy data set is called "TidyData.txt" and is saved in the working directory using the ***write.data(TidayData,./TidyData.txt, row.names = FALSE)*** function.
+5. The final tidy data set was called "TidyData.txt" and saved in the working directory using the ***write.data(TidayData,./TidyData.txt, row.names = FALSE)***.
 
 
 ==========================================================================================
