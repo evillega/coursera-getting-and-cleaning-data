@@ -103,15 +103,36 @@ Changed column labels on the data frames created above
 
 ==========================================================================================
 ####2. Extracts only the measurements on the mean and standard deviation for each measurement
+
+1. Created a character vector containing the column names from the "AllData" data.frame vector. Named the vector "columnNames".  This was used to create a new data.frame vector that only contained mean "mean", standard deveation "std", "ActivityID" and "SubjectID" columns.
+2. A logical vector named "MeanStdVector" was created contained the selected columns.  Columns were selected from the "AllData" data.frame vector using character strings containing either "Activity", "Subject", "std" "mean" and "meanfreq"  using *grepl* command. A total of 68 columns were downselected.
+3. A final table "MeanStdMeasures" data.frame consisting of the mean and standard deviations for each SubjectID and Activity measurements was created. The dimension of the data frame is 10299 x 68.
+
 ==========================================================================================
 ####3. Uses descriptive activity names to name the activites in the data set
+
+1. Created a new data.frame called "MeanStdMeasures_2" that Merged "ActivityLabels" with "MeanStdMeasures" vectors by "ActivityID" using the merge command. A new column containing the Activity (e.g. WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) is added to the new data.frame.
+2. Columns were rearranged so that columns 1:3 are the "SubjectID", "ActivityID", "ActivityType" column.
+
 ==========================================================================================
 ####4. Appropriately labels the data set with descriptive variable names
+
+1. The column names in the "MeandStdMeasures_2" were relabeld to make the data cleaner.  To do this a new vector called "columnNames" containing just the column names of "MeanStdMeasures_2" was created.
+2.  The names were then modified using the *gsub* function. Character strings used are listed below:
+  - "-std"     replaced with "Std"
+  - "-mean"    replaced with "Mean"
+  - "\\(\\)"   replaced with ""     (Note:  this function removes all "()")
+  - "BodyBody" replaced with "Body"
+3. The resulting tidy data set is named "FinalData".
+4. The table was saved in the working directory called "FinalData.txt" without row names or quotes.
+  - This table is used in section 5 below. 
+5. The Variable Names, before and after the changes made in this section is listed in the "Variable Names" section below.
+
 ==========================================================================================
 ####5. Creates a second, independent tidy data wet with the average of each variable for each activity and each subject
 
 
-####Variable Names and Brief Descriptions
+####Variable Names 
 
 
 
