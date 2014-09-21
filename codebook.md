@@ -142,8 +142,16 @@ Changed column labels on the data frames created above
 ==========================================================================================
 ####Variable Names 
 
+Representative transforamtion of variable names
 
+Features Names
 
+Before | After
+--- | ---
+tBodyAcc-mean()-X |	tBodyAccMeanX
+tBodyAcc-mean()-Y |	tBodyAccMeanY
+tBodyAcc-mean()-Z |	tBodyAccMeanZ
+tBodyAcc-std()-X | tBodyAccStdX
 
 
 ==========================================================================================
