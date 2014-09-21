@@ -3,7 +3,7 @@
 
 This is the code book that describes the variables, the data, transformations and work performed to clean up the data using the code *run_analysis.R*
 
-####Background Information on the Data Sets Analyzed in this Assignment
+####Background information on the data sets analyzed in this assignment
 
 Links:
 - [Description](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
@@ -17,7 +17,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
 
-####Raw Data
+####Raw data
 
 ![Diagrammatic relationship of the files in this data set](https://raw.githubusercontent.com/evillega/coursera-getting-and-cleaning-data/master/Diagram.png)
 
@@ -47,13 +47,13 @@ Links:
 
 *For more information about this dataset contact: activityrecognition@smartlab.ws*
 
-####Code Details
+####Code details
 ####i. Preparing working directory 
 
 Created a [*Data*](https://github.com/evillega/coursera-getting-and-cleaning-data/tree/master/data) folder containing all the data sets needed for this assignment. See above for the file list.
 
 ==========================================================================================
-#####1. Merging the training and the test data sets to create one set
+####1. Merging the training and the test data sets to create one set
 Created the following data.frame vectors:
 
 - Features
@@ -105,34 +105,44 @@ Changed column labels on the data frames created above
 ####2. Extracts only the measurements on the mean and standard deviation for each measurement
 
 1. Created a character vector containing the column names from the "AllData" data.frame vector. Named the vector "columnNames".  This was used to create a new data.frame vector that only contained mean "mean", standard deveation "std", "ActivityID" and "SubjectID" columns.
-2. A logical vector named "MeanStdVector" was created contained the selected columns.  Columns were selected from the "AllData" data.frame vector using character strings containing either "Activity", "Subject", "std" "mean" and "meanfreq"  using *grepl* command. A total of 68 columns were downselected.
+2. A logical vector named "MeanStdVector" was created that contained the selected columns.  Columns were selected from the "AllData" data.frame vector using character strings containing either "Activity", "Subject", "std" "mean" and "meanfreq"  using ***grepl*** command. A total of 68 columns were downselected.
 3. A final table "MeanStdMeasures" data.frame consisting of the mean and standard deviations for each SubjectID and Activity measurements was created. The dimension of the data frame is 10299 x 68.
 
 ==========================================================================================
 ####3. Uses descriptive activity names to name the activites in the data set
 
-1. Created a new data.frame called "MeanStdMeasures_2" that Merged "ActivityLabels" with "MeanStdMeasures" vectors by "ActivityID" using the merge command. A new column containing the Activity (e.g. WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING) is added to the new data.frame.
+1. Created a new data.frame called "MeanStdMeasures_2" that Merged "ActivityLabels" with "MeanStdMeasures" vectors by "ActivityID" using the merge command. A new column containing the Activity (e.g. WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) is added to the new data.frame.
 2. Columns were rearranged so that columns 1:3 are the "SubjectID", "ActivityID", "ActivityType" column.
 
 ==========================================================================================
 ####4. Appropriately labels the data set with descriptive variable names
 
-1. The column names in the "MeandStdMeasures_2" were relabeld to make the data cleaner.  To do this a new vector called "columnNames" containing just the column names of "MeanStdMeasures_2" was created.
-2.  The names were then modified using the *gsub* function. Character strings used are listed below:
-  - "-std"     replaced with "Std"
-  - "-mean"    replaced with "Mean"
-  - "\\(\\)"   replaced with ""     (Note:  this function removes all "()")
-  - "BodyBody" replaced with "Body"
-3. The resulting tidy data set is named "FinalData".
-4. The table was saved in the working directory called "FinalData.txt" without row names or quotes.
-  - This table is used in section 5 below. 
-5. The Variable Names, before and after the changes made in this section is listed in the "Variable Names" section below.
+1. The column names in the "MeandStdMeasures_2" were re-labeld to make the data cleaner.  To do this a new vector called "columnNames" containing just the column names of "MeanStdMeasures_2" was created.
+2.  The names were then modified using the ***gsub*** function. Character strings used are listed below:
+  - "-std" replaced with "Std".
+  - "-mean" replaced with "Mean".
+  - "\\(\\)" replaced with "" (Note:  this function removes all "()").
+  - "BodyBody" replaced with "Body".
+3. The variable names, before and after the changes made in this section are listed in the "Variable Names" section below.
+4. The resulting data set is named "FinalData".
+5. The table was saved in the working directory called "FinalData.txt" without row names or quotes.
+  - This table is then used in section 5 below. 
+
 
 ==========================================================================================
-####5. Creates a second, independent tidy data wet with the average of each variable for each activity and each subject
+####5. Creates a second, independent tidy data  with the average of each variable for each activity and each subject
+
+1. Created the final tidy data set that contains the average for each variable, activity, and subject using the ***aggregate*** command.  
+2. A series of column reaarrangements and relabeling were carried out using ***merge*** command so that the first 3 columns are "SubjectID", "ActivityID", and "ActivityType", respectively.
+3. The rows of the tidy data was rearranged so that the values are grouped by "SubjectID" using the ***order*** command.
+4. The "ActivityType" names were cleaned up using the ***gsub*** command.  All "_" were removed from the "WALKING_DOWNSTAIRS" and "WALKING_UPSTAIRS_" names.
+5. The final tidy data set is called "TidyData.txt" and is saved in the working directory using the ***write.data(TidayData,./TidyData.txt, row.names = FALSE)*** function.
 
 
+==========================================================================================
 ####Variable Names 
+
+
 
 
 
